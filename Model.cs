@@ -13,7 +13,7 @@ public class Produto:DBContext
     DbPath = "sistema.db";
   }
   
-  private override void OnConfiguring() => options.UseSqlite($"Data Source = {DbPath}");
+  private override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite($"Data Source = {DbPath}");
     
 }
 
